@@ -27,9 +27,16 @@ console.log(arrayAvg(numbers))
 const strings = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"];
 
 function longestStr(arr) {
-    for (i = 0; i < arr.length; i++) {
-        
-    }
+    let longest = arr[0]
+    arr.forEach(value => {
+        if (value.length > longest.length) {
+            longest = value;
+        }
+    });
+    return longest;
 }
+
+console.log("Longest string:", longestStr(strings))
+
 
 // Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
